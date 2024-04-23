@@ -50,7 +50,7 @@ public class MyController {
         Book b =null;
         try{
             b=myService.addBook(book);
-            return ResponseEntity.status(HttpStatus.CREATED).build();
+            return ResponseEntity.status(HttpStatus.CREATED).body(b);
 
         }catch (Exception e) {
             e.printStackTrace();
